@@ -10,7 +10,7 @@ import os
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)  # Enable CORS for frontend integration
+CORS(app)  
 
 # Download required NLTK data
 try:
@@ -99,7 +99,7 @@ def predict_sentiment(review_text):
     
     # Handle empty processed text
     if not processed:
-        return 3, None  # Return neutral score for empty text
+        return 3, None 
     
     # Transform using TF-IDF vectorizer
     vectorized = tfidf.transform([processed])
